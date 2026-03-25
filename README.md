@@ -1,18 +1,13 @@
 <header>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses the MIT license.
--->
-
 # Publish to GitHub Packages
 
 _Use GitHub Actions to publish your project to a Docker image._
 
 </header>
 
+
+## Step 2: Add a Dockerfile
 <!--
   <<< Author notes: Step 3 >>>
   Start this step by acknowledging the previous step.
@@ -38,10 +33,13 @@ You can now [merge](https://docs.github.com/en/get-started/quickstart/github-glo
   Add a link to get support, GitHub status page, code of conduct, license link.
 -->
 
----
+_You created a publishing workflow! :tada:_
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/publish-packages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+We will add a `Dockerfile` to the `cd` branch. The `Dockerfile` contains a set of instructions that get stored in a `Docker Image`. If you'd like, you can [learn more about Dockerfiles](https://docs.docker.com/engine/reference/builder/).
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+### :keyboard: Activity: Add a Dockerfile
 
-</footer>
+1. In the `cd` branch, create `Dockerfile` at the project root and include:
+   ```dockerfile
+   FROM nginx:1.24-alpine
+   COPY . /usr/share/nginx/html
